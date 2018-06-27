@@ -22,7 +22,7 @@
 			<configuration>
 				<archive>
 					<manifest>
-						<mainClass>RedisOpenShiftTest.src.main.java.RedisOpenShiftTest</mainClass>
+						<mainClass>RedisOpenShiftTest.src.main.java.RedisOpenShiftTest.java</mainClass>
 					</manifest>
 				</archive>
 			</configuration>
