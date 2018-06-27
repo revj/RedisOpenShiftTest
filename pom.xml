@@ -10,4 +10,24 @@
         <version>2.9.0</version>
  	</dependency>
   </dependencies>
+  
+  
+  <build>
+	<plugins>
+		<plugin>
+			<!-- Build an executable JAR -->
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-jar-plugin</artifactId>
+			<version>2.4</version>
+			<configuration>
+				<archive>
+					<manifest>
+						<mainClass>RedisOpenShiftTest.src.main.java.RedisOpenShiftTest</mainClass>
+					</manifest>
+				</archive>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
+  
 </project>
