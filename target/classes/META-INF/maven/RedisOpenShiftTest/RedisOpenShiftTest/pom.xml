@@ -25,21 +25,11 @@
 						<mainClass>RedisOpenShiftTest</mainClass>
 					</manifest>
 				</archive>
+				<descriptorRefs>
+				<descriptorRef>jedis-2.9.0.jar</descriptorRef>
+				</descriptorRefs>
 			</configuration>
 		</plugin>
-		<plugin>
-      <artifactId>maven-assembly-plugin</artifactId>
-      <configuration>
-        <archive>
-          <manifest>
-            <mainClass>RedisOpenShiftTest</mainClass>
-          </manifest>
-        </archive>
-        	<descriptorRefs>
-				<descriptorRef>jedis-2.9.0.jar</descriptorRef>
-			</descriptorRefs>
-      </configuration>
-    </plugin>
 	</plugins>
 </build>
   
