@@ -10,7 +10,7 @@ public class RedisOpenShiftTest {
 		
 		System.out.println("Test... can you see me?");
 		
-		Jedis jedis = new Jedis("http://redis-redistest.7e14.starter-us-west-2.openshiftapps.com", 6379);	// redis://redis:6379/
+		Jedis jedis = new Jedis("142.145.212.217", 6379);	// redis://redis:6379/
 		jedis.set("1", "Hello World!");
 		System.out.println(jedis.get("1"));
 		jedis.close();
