@@ -10,7 +10,9 @@ public class RedisOpenShiftTest {
 		
 		System.out.println("Test... can you see me?");
 		
-		Jedis jedis = new Jedis("172.30.93.221", 6379);	// redis://redis:6379/
+		String url = System.getenv("RedisUrlTest");
+		
+		Jedis jedis = new Jedis(url, 6379);	
 		jedis.set("1", "Hello World!");
 		System.out.println(jedis.get("1"));
 		jedis.close();
