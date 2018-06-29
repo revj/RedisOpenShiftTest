@@ -1,13 +1,16 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisShardInfo;
 
 public class RedisOpenShiftTest {
 	
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, SQLException {
 		
 		System.out.println("Test... can you see me?");
 		
@@ -21,5 +24,14 @@ public class RedisOpenShiftTest {
 		jedis.set("1", "Hello World!");
 		System.out.println(jedis.get("1"));
 		jedis.close();
+		
+		String dbUrl = System.getenv("RuleDbUrl");
+		String dbUsername = System.getenv("RuleDbUsername");
+		String dbPassword = System.getenv("RuleDbPassword");
+		
+		Connection connection = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
+		System.out.println(connection);
+		connection.close();
+		
 	}
 }
